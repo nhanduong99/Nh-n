@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Sample site</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa+One" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+    <!--header-->
+    <header class="container">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white">
+            <a class="navbar navbar" href="/">
+                <img src="/images/logo_shop.png" style="height:50px" alt="Clothes Shop">
+                <h4>Clothes Shop</h4>
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#menu" aria-controls="menu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu" >
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0" style="margin-left:50px;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Shirt <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">T-Shirt <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">Jacket <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">Jean <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">Dress <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">Skirt <span class="sr-only">(current)</span></a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <a href="https://www.facebook.com/DuongNhan1999" target="_blank"><img src="/images/twitter.png" alt="twitter" style="margin: 0 10px;"></a>
+                <a href="https://www.facebook.com/DuongNhan1999" target="_blank"><img src="/images/facebook.png" alt="facebook"></a>
+
+
+            </div>
+        </nav>
+    </header>
+    <!--header-->
+
+<div style="background-color:aqua">
+    <div class="container" id="box_img">
+        <!--list product-->
+        <div class="row" style="padding: 30px;">
+            {{#each abc }}
+            <div class="col-sm-4 text-center">
+                <a href="/danhmuc/{{this.MaDM}}/chitiet/{{this.MaSP}}">
+                    <img src="/images/{{this.MaDM}}/{{this.MaDM}}_{{this.MaSP}}.png"
+                        style="width: auto; height:200px; padding:10px" alt="a">
+                    <h4>{{this.TenSP}}</h4>
+                    <h5 style="padding-bottom: 20px;">{{this.Gia}}VNĐ</h5>                    
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+  
+<!--footer-->
+    <footer class="footer-section text-center" style="background-color: black; padding: 70px 0px 70px 0px;">
+        <div class="container" style="font-size: 50px; color:green">
+            <h1>About me: Dương Thành Nhân</h1>
+            <h4>Address: 418/14A Hong Bang</h4>
+            <h4>Phone: +84 375 182 079</h4>
+            <h4>Email: nhana3@gmail.com</h4>
+        </div>
+        <div class="text-center">
+            <h3>Clothes Shop © 2019 | PRIVACY POLICY</h3>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

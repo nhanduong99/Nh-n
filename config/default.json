@@ -1,0 +1,10 @@
+{
+    "mysql": {
+        "connectionLimit": 50,
+        "host": "db4free.net",
+        "port": 3306,
+        "user": "nhandeptrai",
+        "password": "01864616452n",
+        "database": "clothesshop214"
+    }
+}
